@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Search, PlusCircle, LogIn, LogOut, PackageSearch, MapPin, CalendarDays, ShieldCheck, X, CheckCircle2 } from 'lucide-react'
 
-const API = (import.meta.env.VITE_API_URL || 'http://localhost:8081/api').replace(/\/$/, '')
+
+const API = (import.meta.env.VITE_API_URL || 'https://campusfind-found.onrender.com/api').replace(/\/$/, '')
 async function request(path, options = {}) {
   const res = await fetch(`${API}${path}`, {
     headers: { 'Content-Type': 'application/json', ...(options.headers || {}) },
